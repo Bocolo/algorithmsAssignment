@@ -20,6 +20,8 @@ public class Fibonacci {
         int[] fibonacci;
         while((maxFib+nextNumber)<=fibNumber){
             // System.out.println("\n\n" +maxFib +" <-Fib ...BEFRORE FIB CHANGE... -> Next" +nextNumber);
+            //these numbers are all wrong no need tro be doing so many plus equals
+            
             maxFib += nextNumber;
             fiblist.add(Integer.toString(maxFib));
             // System.out.println(maxFib +" <-Fib ...AFTER FIB CHANGE: BEFORE NN CHANGE... -> Next" +nextNumber);
@@ -33,8 +35,6 @@ public class Fibonacci {
         System.out.print(fiblist);
         myObj.close();
     }
-    public static void returnFibonacci(){
-        
-    }
+ 
 }
 
