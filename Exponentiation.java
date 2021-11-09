@@ -19,23 +19,23 @@ public class Exponentiation {
         }
         return y;
     }
-    public static int Exponent(int x, int n){
-      if (n ==0){
+    public static int Exponent(int z, int y){
+      if (y ==0){
           return 1;
-      }else if(n%2==0){
-          int result=((Exponent(x*x, n/2))*x);
-          return result;
+      }else if(y%2==0){
+          int result2=((Exponent(z*z, y/2))*z);
+          return result2;
       }else{
           return 49;
       }
       
     }
-    public static int Exponent2(int x, int n){
-        if (n ==0){
+    public static int Exponent2(int a, int b){
+        if (b ==0){
             return 1;
         }else{
-            int result=((Exponent(x*x, n/2)));
-            return result;
+            int result3=((Exponent2(a*a, b/2)));
+            return result3;
       }
 }
 }
