@@ -23,10 +23,11 @@ public class Exponentiation {
       if (y ==0){
           return 1;
       }else if(y%2==0){
-          int result2=((Exponent(z*z, y/2))*z);
+          int result2=((Exponent(z*z, y/2)));//*z);
           return result2;
       }else{
-          return 49;
+          int result4 = (Exponent(z*z, (y-1)/2))*z;
+          return result4;
       }
       
     }
