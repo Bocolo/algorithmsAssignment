@@ -2,6 +2,7 @@ import java.util.*;
 
 public class Fibonacci {
     public static void main(String[] args) {
+        //fix weird stering thing im doing here
         Scanner myObj= new Scanner(System.in);
         System.out.print("Please the number you would like fibonaccied: ");
         int fibNumber = myObj.nextInt();
@@ -21,7 +22,7 @@ public class Fibonacci {
         while((maxFib+nextNumber)<=fibNumber){
             // System.out.println("\n\n" +maxFib +" <-Fib ...BEFRORE FIB CHANGE... -> Next" +nextNumber);
             //these numbers are all wrong no need tro be doing so many plus equals
-            
+
             maxFib += nextNumber;
             fiblist.add(Integer.toString(maxFib));
             // System.out.println(maxFib +" <-Fib ...AFTER FIB CHANGE: BEFORE NN CHANGE... -> Next" +nextNumber);

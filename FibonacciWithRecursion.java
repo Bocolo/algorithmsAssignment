@@ -9,10 +9,6 @@ public class FibonacciWithRecursion {
     }
     public static List<Integer> FibNum(int fibNumber){
         List<Integer> fiblist = new ArrayList<>();
-        // for (int i =0; i<= fibNumber-1;i++){
-            
-        //     fiblist.add(FibonacciNumber(i));
-        // }
         int i =0;
         while(FibonacciNumber(i)<fibNumber){
             fiblist.add(FibonacciNumber(i));
