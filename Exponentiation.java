@@ -19,10 +19,8 @@ public class Exponentiation {
       if(y<0){
         System.out.println("Negative");
           double result5 = Exponent(1/z, -y);
-         
           return result5;
-      }
-        else if (y ==0){
+      }else if (y ==0){
             System.out.println("zero");
           return 1;
           //should i do another y==1 ? program works without but i suppose doing additional computation

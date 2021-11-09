@@ -5,19 +5,37 @@ public class FibonacciWithRecursion {
         System.out.print("Please the number you would like fibonaccied: ");
         int fibNumber = myObj.nextInt();
         System.out.println(FibNum(fibNumber));
+        System.out.println(Arrays.toString(FibNum2(fibNumber)));
         myObj.close();
     }
+    //fibbing to nth element
+    public static int[] FibNum2(int fibNumber){
+         int[] fibArray = new int[fibNumber];
+        for(int j=0; j<fibNumber;j++){
+            fibArray[j] = FibonacciNumber2(j);
+        }
+        System.out.println(Arrays.toString(fibArray));
+        return fibArray;
+    }
+    public static int FibonacciNumber2(int fibNumber){
+        if(fibNumber<= 1){
+            return fibNumber;
+        }
+        else{
+            return FibonacciNumber2(fibNumber-1) + FibonacciNumber2(fibNumber-2);
+        }
+    }
+
+    //fibbing untill last no is seq <= n 
     public static List<Integer> FibNum(int fibNumber){
         List<Integer> fiblist = new ArrayList<>();
         int i =0;
-        while(FibonacciNumber(i)<fibNumber){
+        while(FibonacciNumber(i)<=fibNumber){
             fiblist.add(FibonacciNumber(i));
             i++;
-            // System.out.println("i is : "+i);
         }
         return fiblist;
     }
-     
     public static int FibonacciNumber(int fibNumber){
         if(fibNumber<= 1){
             return fibNumber;
@@ -25,43 +43,38 @@ public class FibonacciWithRecursion {
         else{
             return FibonacciNumber(fibNumber-1) + FibonacciNumber(fibNumber-2);
         }
-        
-        
-        // return fibNumber;
     }
-    public static List<Integer> Fibonacci(int fibNumber){
-        int maxFib = 0;
-
-        int start = 0;
-        int nextNumber = 1; 
-
-        List<Integer> fiblist = new ArrayList<>();
-
-        fiblist.add(start);
-        if(fibNumber>1){
-        fiblist.add(nextNumber);
-
-        }
-       
-        while((maxFib+nextNumber)<=fibNumber){
-            // System.out.println("\n\n" +maxFib +" <-Fib ...BEFRORE FIB CHANGE... -> Next" +nextNumber);
-            maxFib += nextNumber;
-            fiblist.add(maxFib);
-            // System.out.println(maxFib +" <-Fib ...AFTER FIB CHANGE: BEFORE NN CHANGE... -> Next" +nextNumber);
-            if((maxFib+nextNumber)<=fibNumber){
-            nextNumber+=maxFib;
-            fiblist.add(nextNumber);
-            // System.out.println(maxFib +" <-Fib ...AFTER NN CHANGE... -> Next" +nextNumber);
-            }
-            System.out.println(maxFib +" <-Fib ...... -> Next" +nextNumber+"\n\n");
-        }
-        return  fiblist;
-
-    }
- 
 }
 //https://dyclassroom.com/recursion-algorithm/fibonacci-series --- just saw this has non recursive --- changes may be needed late now
+    // public static List<Integer> Fibonacci(int fibNumber){
+    //     int maxFib = 0;
 
+    //     int start = 0;
+    //     int nextNumber = 1; 
+
+    //     List<Integer> fiblist = new ArrayList<>();
+
+    //     fiblist.add(start);
+    //     if(fibNumber>1){
+    //     fiblist.add(nextNumber);
+
+    //     }
+       
+    //     while((maxFib+nextNumber)<=fibNumber){
+    //         // System.out.println("\n\n" +maxFib +" <-Fib ...BEFRORE FIB CHANGE... -> Next" +nextNumber);
+    //         maxFib += nextNumber;
+    //         fiblist.add(maxFib);
+    //         // System.out.println(maxFib +" <-Fib ...AFTER FIB CHANGE: BEFORE NN CHANGE... -> Next" +nextNumber);
+    //         if((maxFib+nextNumber)<=fibNumber){
+    //         nextNumber+=maxFib;
+    //         fiblist.add(nextNumber);
+    //         // System.out.println(maxFib +" <-Fib ...AFTER NN CHANGE... -> Next" +nextNumber);
+    //         }
+    //         System.out.println(maxFib +" <-Fib ...... -> Next" +nextNumber+"\n\n");
+    //     }
+    //     return  fiblist;
+
+    // }
 
 /*
 

@@ -12,30 +12,27 @@ public class bubble{
         }
         System.out.println("Your Array before sorting was: "+ Arrays.toString(userArray));
         bubbleSort(userArray);
-        // bubbleSorts(userArray);
         System.out.println("Your Array after sorting is: "+ Arrays.toString(userArray));
         myObj.close();
     }
 
     
     public static void bubbleSort(int[] array){
-        //  int[] tempArray= new int[array.length];
+        //creating a temporary variable to store the integer being moved
          int temp ;
-        //  int total =0;
-        //  int reduction=0;
-        //List<int> tempArray = new ArrayList<>();
+        //outer for loop
         for(int j=0;j<array.length-1;j++){
-            // reduction++;
+            //inner for loop
             for(int i =0; i<array.length-j-1; i++){
-                // for(int i =j; o>0; i++){
-                // total++;
-                // System.out.println("Loop count inner : " +total);
-                // System.out.println("Loop count inner: " +i);
+                //check is number on left larger than number on right
                 if(array[i]>array[i+1]){
-                // tempArray[i] = array[i];
+                    //if it is: store left number in temp variable
                     temp = array[i];
+                    //store right number in left
                     array[i] = array[i+1];
+                    //store temp variable (originally left number) in right
                     array[i+1] =temp;
+                    //outputting array as it is at each sorting step
                     System.out.println(Arrays.toString(array));
                 }
             }
