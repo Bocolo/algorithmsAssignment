@@ -17,16 +17,28 @@ public class Exponentiation {
 
     public static double Exponent(double z, int y){
       if(y<0){
+        System.out.println("Negative");
           double result5 = Exponent(1/z, -y);
+         
           return result5;
       }
         else if (y ==0){
+            System.out.println("zero");
           return 1;
-      }else if(y%2==0){
+          //should i do another y==1 ? program works without but i suppose doing additional computation
+      }else if (y==1){
+        System.out.println("One");
+        return z;
+      }
+      else if(y%2==0){
+        System.out.println("Even");
           double result2=((Exponent(z*z, y/2)));//*z);
+       
           return result2;
       }else{
+        System.out.println("Odd");
           double result4 = (Exponent(z*z, (y-1)/2))*z;
+         
           return result4;
       }
       
